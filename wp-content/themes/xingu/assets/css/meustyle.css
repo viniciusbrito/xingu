@@ -1,0 +1,448 @@
+h1,h2,h3,h4,h5,h6{
+    padding:0 0;
+    margin:0 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+p{
+    padding:0 0;
+    margin:0 0;
+}
+ul{
+    padding:0 0;
+    margin:0 0;
+}
+body{
+    padding:0 0;
+    margin:0 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #eee;
+}
+#search {
+    padding: 2px;
+}
+#search input {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    border-right: 0;
+}
+#search input::placeholder {
+    color: #fff;
+}
+#search button {
+    background: transparent;
+    border: 1px solid #fff;
+    border-left: 0;
+    color: #fff;
+}
+#search button:hover {
+    color: #f2af00;
+}
+
+#header-slider {
+    background: url(../images/banner.jpg) no-repeat 0px 0px;
+    background-size: cover;
+    height: 790px;
+}
+.header-grids {
+    margin-top:-200px;
+    background-color: transparent;
+}
+
+.header-img {
+    background: #074;
+    padding: 1.5em 1em;
+    margin-top: 60em;
+}
+.header-grid img {
+    margin: 0 auto;
+    border-radius: 73px;
+    border: 9px solid #eee;
+    padding: 1em 1em;
+}
+.header-grid h4 {
+    font-size: 1em;
+    padding: 0.5em 0 0;
+    color: #fff;
+    font-weight: 600;
+}
+.header-grid p {
+    font-size: 1em;
+    padding: 0.5em 0;
+    color: #fff;
+    line-height: 1.8em;
+}
+.header-grid img:hover {
+    transform: rotateY(360deg);
+    transition: .5s all;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    -o-transition: .5s all;
+    -ms-transition: .5s all;
+}
+
+/* Quem Somos */
+.sobre {
+    text-align: center;
+    min-height: 400px;
+    overflow: auto;
+    font-style: italic;
+    margin-top: 5em;
+    padding: 2em 0;
+    background-color: #eee;
+}
+
+.sobre h1 {
+    margin-bottom: .5em;
+    font-weight: 600;
+    color: #074;
+    text-align: left;
+}
+.sobre img {
+    width: 100%;
+    height: 100%;
+}
+.sobre p {
+    color: #000;
+    font-size: 1.2em;
+    text-align: justify;
+    margin-top: .5em;
+}
+
+.sobre a {
+    margin: 0;
+}
+
+/*Serviços*/
+.servicos {
+    text-align: center;
+    overflow: auto;   
+    background-color: #fff;
+}
+
+.servicos .transicao {
+    padding: 2em 0;
+}
+
+.servicos .transicao h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-size: 2.5em;
+    color: #074;
+    margin-bottom: .5em;
+}
+
+.servicos .transicao p {
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    color: #3f454d;
+    font-size: 1.5em;
+}
+.servicos .categorias {
+    background: url('https://www.slcagricola.com.br/wp-content/uploads/2015/12/producao.jpg') no-repeat;
+    background-size: 100% auto;
+    background-position: bottom;
+    min-height: 450px;
+    width: 100%;
+/*     border: 1px solid #000; */
+}
+
+
+.servicos a {
+    width: 185px;
+    height: 185px;
+    display: inline-block;
+    background: transparent;
+    border-radius: 200px;
+    border: 3px solid #fff;
+    margin-top: 50px;
+    position: relative;
+    transition: border 0.5s, background-size 0.5s;
+    background-repeat: no-repeat;
+    background-position: center center !important;
+}
+
+.servicos a h4 {
+    color: #f2af00;
+    background: #074;
+    width: 120px;
+    height: 120px;
+    top: 50%;
+    left: 50%;
+    margin: -60px 0px 0px -60px;
+    position: absolute;
+    border-radius: 100px;
+    transition: width 0.2s, height 0.2s, margin 0.2s;
+}
+
+.servicos a span {
+    width: 80%;
+    position: relative;
+    top: -1em;
+    text-align: center;
+    display: none;
+}
+
+.servicos a .ico {
+    display: inline-block;
+    width: 100%;
+    min-height: 100px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    margin-left: 0px;
+    width: 100px;
+    transition: transform 0.2s, margin 0.2s;
+}
+
+.servicos a:hover {
+    border: 15px solid #074;
+}
+
+.servicos a:hover h4 {
+    width: 140px;
+    height: 140px;
+    margin: -70px 0px 0px -70px;
+}
+
+.servicos a:hover .ico {
+    transform: rotateY(180deg);
+
+}
+
+.servicos a:hover span {
+    display: inline-block;
+}
+.equipe-categorias {
+    background-color: #3f454d;
+    color: #fff;
+    padding-top: 3em;
+    min-height: 500px;
+    overflow: auto;
+}
+
+.equipe-categorias h3 {
+    color: #fff;
+    font-size: 2.5em;
+    padding-bottom: 1em;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+}
+.membro {
+    width: 100%;
+    height: 80px;
+}
+.membro a {
+    font-size: 1.3em;
+    color: #fff;
+    margin-bottom: 0.3em;
+    text-decoration:none;
+}
+.membro a:hover {
+    color: #f2af00;
+}
+.membro p {
+    font-size: 1em;
+    line-height:1.8em;
+    color:#999;
+}
+
+.categorias ul li {
+    font-size: 1em;
+    line-height: 1.8em;
+    color: #999;
+    list-style: none;
+    padding: 6px 24px;
+    background: url(../images/list-arrow.png) no-repeat 0px 15px;
+    cursor: pointer;
+    list-style-type: none;
+}
+.categorias ul li:hover {
+    color: #f2af00;
+}
+.up h3 {
+    font-size: 2.5em;
+    text-transform: capitalize;
+    color:#fff;
+    margin-bottom: 1em;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+}
+
+.footer-section {    
+    padding-top: 2em;
+    padding-bottom: 4em;
+    /* text-align: center; */
+    background:#fff;
+    min-height: 350px;
+    width: 100%;
+    float: left;
+}
+.footer-section h1 {
+    color: #074;
+    font-size: 3em;
+    padding: 0.2em;
+}
+.footer-section h5 {
+    font-size: .9em;
+    font-weight: bold;
+    padding: 0.2em;
+    color: #074;
+}
+.footer-section input[type=text] {
+    height: 50px;
+    background-color:#eee;
+}
+.footer-section textarea {
+    width: 100%;
+    height: 160px;
+    resize: none;
+    background-color:#eee;
+}
+.footer-section #footer-logo {
+    margin-top: 4em;
+    float: left;
+}
+.footer-section #footer-contato {
+    margin-top: 3em;
+    float:left;
+    text-align: center;
+}
+.footer-section button {
+    background-color: #074;
+    border-color: #074;
+}
+.footer-section button:hover {
+    background-color: #f2af00;
+    border-color: #f2af00;
+}
+.footer-section #facebook { 
+    width: 100%;
+    height: 150px;
+    float: left;
+    margin-top: 2em;
+}
+.clearfix {clear:both;}
+
+
+@media only screen and (max-width:1024px) {
+    #search {
+        display: none;
+        width: 35%;
+        margin: 1em 1em;
+    }
+    .servicos {
+        background-position: bottom;
+        background-size: 100% auto;
+        min-height: 200px;
+        padding-left: 10%;
+    }
+}
+@media only screen and (max-width:900px) {
+    .navbar-brand {
+        display: none;
+    }
+    
+    .header-grids{
+        padding-top: 10em;
+        float: left;
+    }
+    .header-grid {
+        float: left;
+        width: 50%;
+        margin-top: -0.5em;
+    }
+    #header {
+        margin-top: 0;
+        min-height: 1200px;
+    }
+    .header-img {
+        margin-top: 1em;
+    }
+    .servicos {
+        background-position: bottom;
+        background-size: 100% auto;
+        min-height: 750px;
+        padding-left: 10%;
+
+    }
+    .servicos a {
+        display: table-column;
+        float: left; 
+        margin-right: 2em;
+    }
+    .equipe-categorias {
+        min-height: 1150px;
+    }   
+}
+@media only screen and (max-width:480px) {
+   
+    .navbar-brand {
+        display: none;
+    }
+    .header-grids{
+        padding-top: 10em;
+        min-height: 1200px;
+        position: relative;
+    }
+    .header-grid {
+        width: 100%;
+        margin-top: -0.5em;
+    }
+    .header-img {
+        margin-top: 1em;
+    }
+    .header-grid img {
+        border: 6px solid #eee;
+        width: 35%;
+    }
+    .servicos {
+        background-position: bottom;
+        background-size: 100% auto;
+        min-height: 1900px;
+
+    }
+    .servicos a {
+        display: inline-table;
+        margin-right: 2em;
+        position: sticky;
+        float: none;
+    }
+    .servicos a span {
+        display: block;
+        top: -5em;
+    }
+    .membro {
+        margin-bottom: 5em;
+        width: 100%;
+        min-height: 120px;
+    }
+    .membro p {
+        font-size: 70%;
+    }
+    .membro a {
+        font-size: 75%;
+    }
+}
+
+@media only screen and (max-width:320px) {
+    
+    body {padding: 0; margin:0;}
+    .header-grids{
+        padding-top: 10em;
+        min-height: 500px;
+        float: left;
+    }
+    .header-grid {
+        float: none;
+        width: 100%;
+        margin-top: -0.5em;
+    }
+ 
+    .header-img {
+        margin-top: 1em;
+    }
+    .header-grid img {
+        border: 6px solid #eee;
+        width: 35%;
+    }
+}

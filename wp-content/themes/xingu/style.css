@@ -1,0 +1,71 @@
+/*
+Theme Name: Xingu Pesquisa e Consultoria Agronômica
+Theme URI: 
+Author: Vinicius Brito
+Author URI: https://viniciusbrito.com
+Description: Tema para o site Xingu Pesquisa e Consultoria Agronômica
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: blog, xingu, pesquisa, consultoria, agronômica
+*/
+.navbar-custom {
+    background-color: transparent !important;
+}
+.page-main {
+    margin-top: 8em;
+}
+.page-title {
+    margin: 0;
+}
+.page-title h1 {
+    /* font-family: 'Lobster', cursive; */
+    color: #074;
+    font-size: 3em;
+    margin: 0.2em 0;
+    margin-bottom: 1em;
+    /* text-decoration: #f2af00 underline; */
+}
+
+.page-post-thumb img {
+    width: 100%;
+    max-height: 300px;
+}
+
+.page-post-title {
+    border-bottom: 1px solid #074;
+    margin: 0;
+}
+.page-post-title a:hover {
+    text-decoration: none;
+}
+.page-post-title h2 {
+    text-align: left;
+    font-weight: bold;
+    color: #074;
+    margin: 0.25em 0;
+    margin-top: 0.5em;
+}
+.page-post-date {
+    text-align: left;
+}
+
+
+.page-post-content p {
+    text-align: justify;
+    font-size: 1.25em;
+    margin: 10px 0;
+}
+
+.page-post-footer {
+    margin: 0.25em 0;
+    margin-bottom: 4em;
+    text-align: center;
+}
+
+.paginacao {
+    text-align: center; 
+}
+.btn-success {
+    background-color: #074;
+}
