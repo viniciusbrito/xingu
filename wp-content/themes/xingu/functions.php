@@ -35,24 +35,24 @@ function register_menu()
 add_action('init', 'register_menu');
 
 
-/* Registro Custom Post type Slider */
-/* add_action('init', 'slider_registrer');
-function slider_registrer()
+/* Registro Custom Post type Crops */
+add_action('init', 'cultura_register');
+function cultura_register()
 {
-     $labels = array(
-        'name' => 'Slider', 'post type general name'),
-        'singular_name' => 'Slider', 'post type singular name'),
-        'add_new' => 'Adicionar slider', 'slider'),
-        'add_new_item' => 'Adicionar slider',
-        'edit_item' => 'Editar slider',
-        'new_item' => 'Novo slider',
-        'view_item' => 'Ver slider',
-        'search_items' => 'Procurar slider',
+     $labels = [
+        'name' => 'Culturas',
+        'singular_name' => 'Cultura',
+        'add_new' => 'Adicionar Cultura',
+        'add_new_item' => 'Adicionar Cultura',
+        'edit_item' => 'Editar Cultura',
+        'new_item' => 'Novo Cultura',
+        'view_item' => 'Ver Cultura',
+        'search_items' => 'Procurar Cultura',
         'not_found' =>  'Nada encontrado',
         'not_found_in_trash' => 'Nada encontrado no lixo',
         'parent_item_colon' => ''
-    );
-    $args = array(
+    ];
+    $args = [
         'labels' => $labels,
         'public' => true,
         'publicly_queryable' => true,
@@ -60,14 +60,14 @@ function slider_registrer()
         'query_var' => true,
         'rewrite' => true,
         'has_archive' => true,
-        'menu_icon' => 'dashicons-media-code',
+        'menu_icon' => 'dashicons-images-alt',
         'capability_type' => 'post',
         'hierarchical' => false,
-        'menu_position' => 6,
-        'supports' => array('title','thumbnail'),
-      );
-    register_post_type('slider',$args);
-} */
+        'menu_position' => 9,
+        'supports' => ['title', 'thumbnail'],
+    ];
+    register_post_type('cultura',$args);
+}
 /* Fim registro slider */
 
 /* Registro Custom Post type Equipe */
@@ -95,7 +95,7 @@ function equipe_registrer()
         'query_var' => true,
         'rewrite' => true,
         'has_archive' => true,
-        'menu_icon' => 'dashicons-media-code',
+        'menu_icon' => 'dashicons-admin-users',
         'capability_type' => 'post',
         'hierarchical' => false,
         'menu_position' => 5,

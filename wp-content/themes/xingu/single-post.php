@@ -5,8 +5,8 @@
             <div class="col-sm-8 col-xs-12">
                 <div class="row">
                     <div class="col-sm-12">
-                        <div class="thumb-cover" style="width: 100%; max-height: 500px;">
-                            <?php the_post_thumbnail() ?>
+                        <div class="thumb-cover">
+                            <img src="<?php the_post_thumbnail_url() ?>" alt="" style="width: 100%; max-height: 200px;">    
                         </div>
                     </div>
                 </div>
@@ -18,7 +18,7 @@
                 <?php if(have_posts()): while(have_posts()): the_post() ?>
                     <div class="row">
                         <div class="col-sm-12">
-                            <p><?php the_content(); ?></p>
+                            <p style="text-align:justify;"><?php the_content(); ?></p>
                         </div>
                     </div>
                 <?php endwhile; endif; ?>

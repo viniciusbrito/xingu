@@ -10,7 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, xingu, pesquisa, consultoria, agronômica
 */
 .navbar-custom {
-    background-color: transparent !important;
+    /* background-color: transparent !important; */
 }
 .page-main {
     margin-top: 8em;

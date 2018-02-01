@@ -90,10 +90,41 @@
     </section>
     <div class="clearfix"></div>
     
-    <section class="equipe-categorias">
+    <section class="culturas">
         <div class="container">
             <div class="row">
-                <!-- Equipe -->
+                <div class="col-xs-12 col-md-12">
+                    <h1>Culturas</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-12">
+                    <?php
+                        $loop = new WP_Query([
+                            'post_type' => 'cultura',
+                            'meta_key'  => 'posicao',
+                            'orderby'   => 'posicao',
+                            'order'     => 'ASC'
+                        ]);
+                        if($loop->have_posts()) : while($loop->have_posts()) : $loop->the_post()
+                    ?>
+                        <div class="cultura" style="background-image: url('<?php the_post_thumbnail_url(); ?>')">
+                            <a href="<?php the_permalink(); ?>">
+                                <div class="textbox">
+                                    <img src="<?php the_field('icone'); ?>" alt="<?php the_title(); ?>">
+                                </div>    
+                            </a>
+                        </div>
+                    <?php endwhile; endif; ?>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="clearfix"></div>
+    <!-- <section class="equipe-categorias">
+        <div class="container">
+            <div class="row">
+                
                 <div class="col-xs-12 col-md-6 equipe">
                     <h3>Equipe</h3>
                     <?php
@@ -120,8 +151,8 @@
                             </div>
                         <?php endwhile; endif; ?>
                 </div>
-                <!-- Categorias -->
-                <div class="col-xs-12 col-md-4 col-md-offset-2 categorias">
+                
+                <div class="col-xs-12 col-md-4 categorias">
                     <h3>Serviços</h3>
                     <ul>
                         <li>Comércio e Insumos</li>
@@ -137,11 +168,25 @@
             </div>
         </div>
     </section> 
-    <div class="clearfix"></div>
+    <div class="clearfix"></div> -->
     
     <section class="blog">
         <div class="container">
-            Blog
+            <h1>Notícias</h1>
+            <div class="row">
+                <?php
+                    query_posts( ['post_type' => 'post', 'showposts' => 3, 'paged'=>$paged] );
+                    if(have_posts()) : while(have_posts()) : the_post()
+                ?>
+                    <div class="col-md-4 col-xs-12">                
+                        <?php the_post_thumbnail(false, ['class'=>'img-responsive']); ?>
+                        <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
+                        <span><?php the_date(); ?></span>
+                        <p><?php the_excerpt(); ?></p>
+                        <a class="btn btn-md btn-success" href="<?php the_permalink(); ?>">Leia mais</a>
+                    </div>
+                <?php endwhile; endif; ?>
+            </div>
         </div>
     </section>
     <div class="clearfix"></div>
