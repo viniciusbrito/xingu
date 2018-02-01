@@ -109,11 +109,11 @@
                         if($loop->have_posts()) : while($loop->have_posts()) : $loop->the_post()
                     ?>
                         <div class="cultura" style="background-image: url('<?php the_post_thumbnail_url(); ?>')">
-                            <a href="<?php the_permalink(); ?>">
+
                                 <div class="textbox">
                                     <img src="<?php the_field('icone'); ?>" alt="<?php the_title(); ?>">
-                                </div>    
-                            </a>
+                                    <p><?php the_title(); ?></p>
+                                </div>
                         </div>
                     <?php endwhile; endif; ?>
                 </div>
