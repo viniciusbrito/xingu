@@ -16,35 +16,35 @@
                 <div class="col-md-12 header-grids">
                     <div class="col-md-2 col-md-offset-1 header-grid">
                         <div class="header-img text-center">
-                            <img src="<?=$uploadDir?>/2018/01/icon4.png" class="img-responsive" alt="/">
+                            <img src="<?=$templateHome?>/assets/images/icon4.png" class="img-responsive" alt="/">
                             <h4>Infraestrutura</h4>
                         </div>
                     </div>
 
                     <div class="col-md-2 header-grid">
                         <div class="header-img text-center">
-                            <img src="<?=$uploadDir?>/2018/01/icon5.png" class="img-responsive" alt="/">
+                            <img src="<?=$templateHome?>/assets/images/icon5.png" class="img-responsive" alt="/">
                             <h4>Consultoria</h4>
                         </div>
                     </div>
 
                     <div class="col-md-2 header-grid">
                         <div class="header-img text-center">
-                            <img src="<?=$uploadDir?>/2018/01/icon6.png" class="img-responsive" alt="/">
+                            <img src="<?=$templateHome?>/assets/images/icon6.png" class="img-responsive" alt="/">
                             <h4>Pesquisa e Tecnologia</h4>
                         </div>
                     </div>
 
                     <div class="col-md-2 header-grid">
                         <div class="header-img text-center">
-                            <img src="<?=$uploadDir?>/2018/01/icon7.png" class="img-responsive" alt="/">
+                            <img src="<?=$templateHome?>/assets/images/icon8.png" class="img-responsive" alt="/">
                             <h4>Estágio</h4>
                         </div>
                     </div>
 
                     <div class="col-md-2 header-grid">
                         <div class="header-img text-center">
-                            <img src="<?=$uploadDir?>/2018/01/icon7.png" class="img-responsive" alt="/">
+                            <img src="<?=$templateHome?>/assets/images/icon9.png" class="img-responsive" alt="/">
                             <h4>Localização e contato</h4>
                         </div>
                     </div>
@@ -53,6 +53,7 @@
         </div>
     </section>
     <div class="clearfix"></div>
+    
     <section class="sobre">        
         <div class="container">
             <?php 
@@ -74,17 +75,40 @@
     </section>
     <div class="clearfix"></div>
 
-    <section class="servicos"> 
-        <div class="container-fluid">
+    <section class="transicao">
+        <div class="container">
             <div class="row">
-                <div class="col-md-12 transicao">
+                <div class="col-xs-12 col-md-12">
                     <h3>Justo nec ultrices dui sapien eget mi proin.</h3>
                     <p>In hendrerit gravida rutrum quisque non tellus. In vitae turpis massa. <br/> Ipsum suspendisse ultrices gravida dictum fusce ut placerat.</p>
                 </div>
             </div>
+        </div>
+    </section>
+    <div class="clearfix"></div>
+
+    <section class="servicos"> 
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12 categorias">
-                </div>
+                <?php
+                    $loop = new WP_Query([
+                        'post_type' => 'categoria',
+                        'meta_key'  => 'posicao',
+                        'orderby'   => 'posicao',
+                        'order'     => 'ASC'
+                    ]);
+                    if($loop->have_posts()) : while($loop->have_posts()) : $loop->the_post()
+                ?>
+
+                    <div class="col-xs-12 col-md-4">
+                        <a href="" style="background: url('<?php the_post_thumbnail_url(); ?>') no-repeat center center;">
+                            <div class="icone">
+                                <span class="ico" style="background: url('<?php the_field('icone'); ?>') no-repeat center center;"></span>
+                            </div>    
+                        </a>
+                        <h4><?php the_title(); ?></h4>
+                    </div>
+                <?php endwhile; endif; ?>
             </div>
         </div>
     </section>
@@ -121,54 +145,6 @@
         </div>
     </section>
     <div class="clearfix"></div>
-    <!-- <section class="equipe-categorias">
-        <div class="container">
-            <div class="row">
-                
-                <div class="col-xs-12 col-md-6 equipe">
-                    <h3>Equipe</h3>
-                    <?php
-                        $loop = new WP_Query( [
-                            'post_type' => 'equipe',
-                            'meta_key'  => 'ordem',
-                            'orderby'   => 'ordem',
-                            'order'     => 'ASC'
-                        ]);
-                        if($loop->have_posts()) : while($loop->have_posts()) : $loop->the_post()
-                    ?>
-                            <div class="row">
-                                <div class="col-xs-12 col-md-12">
-                                    <div class="membro">
-                                        <div class="col-xs-4 col-md-2 col-sm-2">
-                                            <?php the_post_thumbnail(false, ['class'=>'img-responsive']); ?>
-                                        </div>
-                                        <div class="col-xs-8 col-md-10 col-sm-10 text-left">
-                                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                                            <p><?php the_field('descricao'); ?></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        <?php endwhile; endif; ?>
-                </div>
-                
-                <div class="col-xs-12 col-md-4 categorias">
-                    <h3>Serviços</h3>
-                    <ul>
-                        <li>Comércio e Insumos</li>
-                        <li>Comercialização de grãos</li>
-                        <li>Assistência técnica personalizada</li>
-                        <li>Armazenagem com entrega fracionada</li>
-                        <li>Mapeamento de área e projeto agrícola da safra</li>
-                        <li>Agricultura de precisão</li>
-                        <li>Armazenagem de grãos</li>
-                        <li>Armazenagem de sementes em barracão climatizado</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section> 
-    <div class="clearfix"></div> -->
     
     <section class="blog">
         <div class="container">

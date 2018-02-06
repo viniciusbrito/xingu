@@ -5,7 +5,7 @@ function wp_responsivo_scripts()
     /* Carregando CSS header */
     wp_enqueue_style( 'reset', get_template_directory_uri() . '/assets/css/reset.css' );
     wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css' );
-    wp_enqueue_style( 'custom', get_template_directory_uri() . '/assets/css/meustyle.css' );
+    wp_enqueue_style( 'frontpage', get_template_directory_uri() . '/assets/css/frontpage.css' );
     wp_enqueue_style( 'style', get_stylesheet_uri() );
     /* Carregando no footer */
     wp_enqueue_script('bootstrap-js', get_template_directory_uri().'/assets/js/bootstrap.min.js', ['jquery'], '', true );
@@ -34,6 +34,40 @@ function register_menu()
 }
 add_action('init', 'register_menu');
 
+/* Registro Custom Post type categorias */
+add_action('init', 'categorias_register');
+function categorias_register()
+{
+     $labels = [
+        'name' => 'Categorias',
+        'singular_name' => 'Categoria',
+        'add_new' => 'Adicionar Categoria',
+        'add_new_item' => 'Adicionar Categoria',
+        'edit_item' => 'Editar Categoria',
+        'new_item' => 'Novo Categoria',
+        'view_item' => 'Ver Categoria',
+        'search_items' => 'Procurar Categoria',
+        'not_found' =>  'Nada encontrado',
+        'not_found_in_trash' => 'Nada encontrado no lixo',
+        'parent_item_colon' => ''
+    ];
+    $args = [
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'has_archive' => true,
+        'menu_icon' => 'dashicons-images-alt',
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'menu_position' => 9,
+        'supports' => ['title', 'thumbnail'],
+    ];
+    register_post_type('categoria',$args);
+}
+/* Fim registro Post type categorias */
 
 /* Registro Custom Post type Crops */
 add_action('init', 'cultura_register');
@@ -68,7 +102,7 @@ function cultura_register()
     ];
     register_post_type('cultura',$args);
 }
-/* Fim registro slider */
+/* Fim registro Post type Crops */
 
 /* Registro Custom Post type Equipe */
 add_action('init', 'equipe_registrer');
