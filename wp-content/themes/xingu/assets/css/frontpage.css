@@ -39,13 +39,14 @@ ul{
     color: #f2af00;
 }
 
+
 #header-slider {
     background: url(../images/banner.jpg) no-repeat 0px 0px;
     background-size: cover;
-    height: 790px;
+    height: 720px;
 }
 .header-grids {
-    margin-top:-200px;
+    margin-top:-940px;
     background-color: transparent;
 }
 
