@@ -9,9 +9,9 @@
     var slideshow = function () {
         let url = 'url("' + images[Math.floor(Math.random() * count)]+'")';
         $slides
-            .fadeOut(1500, function () {
+            .fadeOut(5000, function () {
                 $slides.css('background-image', url);
-                setTimeout(slideshow, 5003);
+                setTimeout(slideshow, 15000);
             })            
             .fadeIn(1500, () => {
                 $slides.css('background-image', url);
@@ -20,4 +20,19 @@
 
     slideshow();
 
+}(jQuery));
+
+(function ($) {
+    'use strict';
+
+    $(window).scroll(function () {
+        if ($(document).scrollTop() > 120) {
+            $('#navbar').addClass('navbar-custom-scrolled');
+            $('#navbar').removeClass('navbar-custom');
+        }
+        if ($(document).scrollTop() == 0) {
+            $('#navbar').addClass('navbar-custom');
+            $('#navbar').removeClass('navbar-custom-scrolled');
+        }
+    });
 }(jQuery));

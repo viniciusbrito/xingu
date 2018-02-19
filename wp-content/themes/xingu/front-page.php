@@ -12,39 +12,44 @@
             <img style="display: none" src="<?=$uploadDir?>/2018/01/BG02-1440x900.jpg" alt="">
             <img style="display: none" src="<?=$uploadDir?>/2018/01/BG03-1440x900.jpg" alt="">
             <img style="display: none" src="<?=$uploadDir?>/2018/01/banner.jpg" alt="">
+            
+            <div class="xingu-logo">
+                <img src="<?= $templateHome ?>/assets/images/logo_xingu.png" alt="Logo Xingu">
+            </div>
         </div>
+        <div class="clearfix"></div>
         <div class="container-fluid header-grids">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="col-md-2 col-md-offset-1 header-grid">
+                    <div class="col-xs-2  col-sm-2 col-md-2 col-md-offset-1 header-grid">
                         <div class="header-img text-center">
                             <img src="<?=$templateHome?>/assets/images/icon4.png" class="img-responsive" alt="/">
                             <h4>Infraestrutura</h4>
                         </div>
                     </div>
     
-                    <div class="col-md-2 header-grid">
+                    <div class="col-xs-2  col-sm-2 col-md-2 header-grid">
                         <div class="header-img text-center">
                             <img src="<?=$templateHome?>/assets/images/icon5.png" class="img-responsive" alt="/">
                             <h4>Consultoria</h4>
                         </div>
                     </div>
     
-                    <div class="col-md-2 header-grid">
+                    <div class="col-xs-2  col-sm-2 col-md-2 header-grid">
                         <div class="header-img text-center">
                             <img src="<?=$templateHome?>/assets/images/icon6.png" class="img-responsive" alt="/">
                             <h4>Pesquisa e Tecnologia</h4>
                         </div>
                     </div>
     
-                    <div class="col-md-2 header-grid">
+                    <div class="col-xs-2  col-sm-2 col-md-2 header-grid">
                         <div class="header-img text-center">
-                            <img src="<?=$templateHome?>/assets/images/icon8.png" class="img-responsive" alt="/">
+                            <img src="<?=$templateHome?>/assets/images/icon7.png" class="img-responsive" alt="/">
                             <h4>Estágio</h4>
                         </div>
                     </div>
     
-                    <div class="col-md-2 header-grid">
+                    <div class="col-xs-2  col-sm-2 col-md-2 header-grid">
                         <div class="header-img text-center">
                             <img src="<?=$templateHome?>/assets/images/icon9.png" class="img-responsive" alt="/">
                             <h4>Localização e contato</h4>

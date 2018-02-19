@@ -39,17 +39,29 @@ ul{
     color: #f2af00;
 }
 
-
 #header-slider {
     background: url(../images/banner.jpg) no-repeat 0px 0px;
     background-size: cover;
     height: 720px;
 }
+#header-slider .xingu-logo {
+    position: absolute;
+    width: 512px;
+    margin-top: 15%;
+    margin-left: 30%;
+}
+#header-slider .xingu-logo img {
+    width: 100%;
+    height:auto;
+}
+
 .header-grids {
     margin-top:-940px;
     background-color: transparent;
 }
+.header-grid {
 
+}
 .header-img {
     background: #074;
     padding: 1.5em 1em;
@@ -140,7 +152,7 @@ ul{
 .servicos {
     text-align: center;
     overflow: auto;
-    background: url('https://www.slcagricola.com.br/wp-content/uploads/2015/12/producao.jpg') no-repeat;
+    background: url('../images/categorias-background.jpg') no-repeat;
     background-size: 100% auto;
     background-color: #fff;
     background-position: center;
@@ -423,9 +435,9 @@ ul{
     }
 }
 @media only screen and (max-width:900px) {
-    .navbar-brand {
+    /* .navbar-brand {
         display: none;
-    }
+    } */
     
     .header-grids{
         padding-top: 10em;
@@ -439,6 +451,9 @@ ul{
     #header {
         margin-top: 0;
         min-height: 1200px;
+    }
+    #header-slider .xingu-logo {
+        display: none;
     }
     .header-img {
         margin-top: 1em;
