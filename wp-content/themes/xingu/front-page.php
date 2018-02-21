@@ -7,15 +7,15 @@
 <main>
     
     <section class="header">        
-        <div class="container-fluid" id="header-slider" data-slides='["<?=$uploadDir?>/2018/01/banner.jpg", "<?=$uploadDir?>/2018/01/BG01-1440x900.jpg", "<?=$uploadDir?>/2018/01/BG02-1440x900.jpg", "<?=$uploadDir?>/2018/01/BG03-1440x900.jpg"]'>
-            <img style="display: none" src="<?=$uploadDir?>/2018/01/BG01-1440x900.jpg" alt="">
-            <img style="display: none" src="<?=$uploadDir?>/2018/01/BG02-1440x900.jpg" alt="">
-            <img style="display: none" src="<?=$uploadDir?>/2018/01/BG03-1440x900.jpg" alt="">
-            <img style="display: none" src="<?=$uploadDir?>/2018/01/banner.jpg" alt="">
+        <div class="container-fluid" id="header-slider" data-slides='["<?=$templateHome?>/assets/images/banner.jpg", "<?=$templateHome?>/assets/images/BG01-1440x900.jpg", "<?=$templateHome?>/assets/images/BG02-1440x900.jpg", "<?=$templateHome?>/assets/images/BG03-1440x900.jpg"]'>
+            <img style="display: none" src="<?=$templateHome?>/assets/images/BG01-1440x900.jpg" alt="">
+            <img style="display: none" src="<?=$templateHome?>/assets/images/BG02-1440x900.jpg" alt="">
+            <img style="display: none" src="<?=$templateHome?>/assets/images/BG03-1440x900.jpg" alt="">
+            <img style="display: none" src="<?=$templateHome?>/assets/images/banner.jpg" alt="">
             
-            <div class="xingu-logo">
+            <!-- <div class="xingu-logo">
                 <img src="<?= $templateHome ?>/assets/images/logo_xingu.png" alt="Logo Xingu">
-            </div>
+            </div> -->
         </div>
         <div class="clearfix"></div>
         <div class="container-fluid header-grids">
@@ -97,25 +97,54 @@
     <section class="servicos"> 
         <div class="container-fluid">
             <div class="row">
-                <?php
-                    $loop = new WP_Query([
-                        'post_type' => 'categoria',
-                        'meta_key'  => 'posicao',
-                        'orderby'   => 'posicao',
-                        'order'     => 'ASC'
-                    ]);
-                    if($loop->have_posts()) : while($loop->have_posts()) : $loop->the_post()
-                ?>
-
-                    <div class="col-xs-12 col-md-4">
-                        <a href="" style="background: url('<?php the_post_thumbnail_url(); ?>') no-repeat center center;">
-                            <div class="icone">
-                                <span class="ico" style="background: url('<?php the_field('icone'); ?>') no-repeat center center;"></span>
-                            </div>    
-                        </a>
-                        <h4><?php the_title(); ?></h4>
-                    </div>
-                <?php endwhile; endif; ?>
+                <div class="col-xs-12 col-md-4">
+                    <a href="" id="clima">
+                        <div class="icone">
+                            <span class="ico" id="clima-ico"></span>
+                        </div>    
+                    </a>
+                    <h4>Clima</h4>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <a href="" id="mercado">
+                        <div class="icone">
+                            <span class="ico" id="mercado-ico"></span>
+                        </div>    
+                    </a>
+                    <h4>Mercado</h4>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <a href="" id="agronegocio">
+                        <div class="icone">
+                            <span class="ico" id="agronegocio-ico"></span>
+                        </div>    
+                    </a>
+                    <h4>Agronegocio</h4>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <a href="" id="politica">
+                        <div class="icone">
+                            <span class="ico" id="politica-ico"></span>
+                        </div>    
+                    </a>
+                    <h4>Politica</h4>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <a href="" id="parceiros">
+                        <div class="icone">
+                            <span class="ico" id="parceiros-ico"></span>
+                        </div>    
+                    </a>
+                    <h4>Parceiros</h4>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <a href="" id="eventos">
+                        <div class="icone">
+                            <span class="ico" id="eventos-ico"></span>
+                        </div>    
+                    </a>
+                    <h4>Eventos</h4>
+                </div>
             </div>
         </div>
     </section>
@@ -130,23 +159,54 @@
             </div>
             <div class="row">
                 <div class="col-xs-12 col-md-12">
-                    <?php
-                        $loop = new WP_Query([
-                            'post_type' => 'cultura',
-                            'meta_key'  => 'posicao',
-                            'orderby'   => 'posicao',
-                            'order'     => 'ASC'
-                        ]);
-                        if($loop->have_posts()) : while($loop->have_posts()) : $loop->the_post()
-                    ?>
-                        <div class="cultura" style="background-image: url('<?php the_post_thumbnail_url(); ?>')">
-
-                                <div class="textbox">
-                                    <img src="<?php the_field('icone'); ?>" alt="<?php the_title(); ?>">
-                                    <p><?php the_title(); ?></p>
-                                </div>
+                    <div class="cultura" id="algodao">
+                        <div class="textbox">
+                            <img src="<?= $templateHome ?>/assets/images/algodao.png" alt="Algodão">
+                            <p>Algodão</p>
                         </div>
-                    <?php endwhile; endif; ?>
+                    </div>
+                    <div class="cultura" id="soja">
+                        <div class="textbox">
+                            <img src="<?= $templateHome ?>/assets/images/soja.png" alt="Soja">
+                            <p>Soja</p>
+                        </div>
+                    </div>
+                    <div class="cultura" id="milho">
+                        <div class="textbox">
+                            <img src="<?= $templateHome ?>/assets/images/milho.png" alt="Milho">
+                            <p>Milho</p>
+                        </div>
+                    </div>
+                    <div class="cultura" id="arroz">
+                        <div class="textbox">
+                            <img src="<?= $templateHome ?>/assets/images/arroz.png" alt="Arroz">
+                            <p>Arroz</p>
+                        </div>
+                    </div>
+                    <div class="cultura" id="feijao">
+                        <div class="textbox">
+                            <img src="<?= $templateHome ?>/assets/images/feijao.png" alt="Feijão">
+                            <p>Feijão</p>
+                        </div>
+                    </div>
+                    <div class="cultura" id="girassol">
+                        <div class="textbox">
+                            <img src="<?= $templateHome ?>/assets/images/girassol.png" alt="Girassol">
+                            <p>Girassol</p>
+                        </div>
+                    </div>
+                    <div class="cultura" id="pastagem">
+                        <div class="textbox">
+                            <img src="<?= $templateHome ?>/assets/images/pastagem.png" alt="Pastagem">
+                            <p>Pastagem</p>
+                        </div>
+                    </div>
+                    <div class="cultura" id="outros">
+                        <div class="textbox">
+                            <img src="<?= $templateHome ?>/assets/images/outros.png" alt="Outros">
+                            <p>Outros</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

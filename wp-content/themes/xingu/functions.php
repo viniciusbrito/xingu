@@ -35,7 +35,7 @@ function register_menu()
 add_action('init', 'register_menu');
 
 /* Registro Custom Post type categorias */
-add_action('init', 'categorias_register');
+/* add_action('init', 'categorias_register');
 function categorias_register()
 {
      $labels = [
@@ -66,11 +66,11 @@ function categorias_register()
         'supports' => ['title', 'thumbnail'],
     ];
     register_post_type('categoria',$args);
-}
+} */
 /* Fim registro Post type categorias */
 
 /* Registro Custom Post type Crops */
-add_action('init', 'cultura_register');
+/* add_action('init', 'cultura_register');
 function cultura_register()
 {
      $labels = [
@@ -101,7 +101,7 @@ function cultura_register()
         'supports' => ['title', 'thumbnail'],
     ];
     register_post_type('cultura',$args);
-}
+} */
 /* Fim registro Post type Crops */
 
 /* Registro Custom Post type Equipe */

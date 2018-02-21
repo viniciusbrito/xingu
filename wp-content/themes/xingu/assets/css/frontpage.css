@@ -161,21 +161,19 @@ ul{
     /* border: 1px solid #000; */
     padding: 2em 0 5em 0;
 }
-
 .servicos a {
     width: 185px;
     height: 185px;
     display: inline-block;
     background: transparent;
     border-radius: 200px;
-    border: 3px solid #fff;
+    border: 2px solid #074;
     margin-top: 50px;
     position: relative;
     transition: border 0.5s, background-size 0.5s;
     background-repeat: no-repeat;
     background-position: center center !important;
 }
-
 .servicos a .icone {
     background-color: #074;
     width: 120px;
@@ -187,7 +185,6 @@ ul{
     border-radius: 100px;
     transition: width 0.2s, height 0.2s, margin 0.2s;
 }
-
 .servicos a .ico {
     display: inline-block;
     width: 100%;
@@ -198,7 +195,6 @@ ul{
     width: 100px;
     transition: transform 0.2s, margin 0.2s;
 }
-
 .servicos h4 {
 
     margin-top: .5em;
@@ -206,20 +202,53 @@ ul{
     font-size: 1.5em;
     font-weight: 800;
     text-transform: capitalize;
-    /* text-shadow: 2px 2px 15px #f2af00; */
+    text-shadow: 1px 1px 1px #fff;
 }
-
 .servicos a:hover {
     border: 15px solid #074;
 }
-
 .servicos a:hover h4 {
     font-size: 2em;
 }
-
 .servicos a:hover .ico {
     transform: rotateY(180deg);
 
+}
+/* .servicos #clima {
+    background: url('../images/clima_bg.jpg') no-repeat center center;
+}
+.servicos #mercado {
+    background: url('../images/mercado_bg.jpg') no-repeat center center;
+}
+.servicos #agronegocio {
+    background: url('../images/agronegocio_bg.jpg') no-repeat center center;
+}
+.servicos #politica {
+    background: url('../images/politica_bg.jpg') no-repeat center center;
+}
+.servicos #pareceitos {
+    background: url('../images/parceiros_bg.jpg') no-repeat center center;
+}
+.servicos #eventos {
+    background: url('../images/eventos_bg.jpg') no-repeat center center;
+} */
+.servicos #clima-ico {
+    background: url('../images/clima.png') no-repeat center center;
+}
+.servicos #mercado-ico {
+    background: url('../images/mercado.png') no-repeat center center;
+}
+.servicos #agronegocio-ico {
+    background: url('../images/agronegocio.png') no-repeat center center;
+}
+.servicos #politica-ico {
+    background: url('../images/politica.png') no-repeat center center;
+}
+.servicos #parceiros-ico {
+    background: url('../images/parceiros.png') no-repeat center center;
+}
+.servicos #eventos-ico {
+    background: url('../images/eventos.png') no-repeat center center;
 }
 
 /* Culturas */
@@ -265,7 +294,6 @@ ul{
 .cultura:hover .textbox {
     transform: scale(1);
 }
-
 .textbox {
     transition: all 0.7s;
     transition-timing-function: linear;
@@ -290,6 +318,30 @@ ul{
     text-transform: capitalize;
     text-shadow: 2px 2px 15px #445;
     z-index: 1000;
+}
+.culturas #algodao {
+    background-image: url('../images/algodao_bg.jpg');
+}
+.culturas #soja {
+    background-image: url('../images/soja_bg.jpg');
+}
+.culturas #milho {
+    background-image: url('../images/milho_bg.jpg');
+}
+.culturas #arroz {
+    background-image: url('../images/arroz_bg.jpg');
+}
+.culturas #feijao {
+    background-image: url('../images/feijao_bg.jpg');
+}
+.culturas #girassol {
+    background-image: url('../images/girassol_bg.jpg');
+}
+.culturas #pastagem {
+    background-image: url('../images/pastagem_bg.jpg');
+}
+.culturas #outros {
+    background-image: url('../images/outros_bg.jpg');
 }
 
 /* Blog */

@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header('page'); ?>
 
 <div class="container">
 	<div id="content" role="main">

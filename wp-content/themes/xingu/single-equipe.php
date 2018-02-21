@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header('page'); ?>
 <main>
     <div class="container" style="margin-top: 110px;">        
         <div class="row">

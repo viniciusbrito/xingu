@@ -9,13 +9,13 @@
     var slideshow = function () {
         let url = 'url("' + images[Math.floor(Math.random() * count)]+'")';
         $slides
-            .fadeOut(5000, function () {
+            .fadeOut(15000, function () {
                 $slides.css('background-image', url);
                 setTimeout(slideshow, 15000);
             })            
             .fadeIn(1500, () => {
                 $slides.css('background-image', url);
-            });
+        });
     };
 
     slideshow();
