@@ -35,13 +35,13 @@
                 <div class="paginacao"><?php wp_pagination();?></div>
             </div>
             <div class="col-md-3 col-xs-12 right">
-                <li id="archives"><?php _e('Archives:'); ?>
+                <h3>Arquivo</h3>
                     <ul>
-                <?php wp_get_archives('type=monthly'); ?>
+                        <?php wp_get_archives('type=monthly'); ?>
                     </ul>
                 <div class="row">
                     <div class="col-md-12">
-                        <h2>Categorias</h2>
+                        <h3>Categorias</h3>
                         <ul class="list-group">
                             <?php
                             $categories =  get_categories(); 

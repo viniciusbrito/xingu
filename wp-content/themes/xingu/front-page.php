@@ -119,7 +119,7 @@
                             <span class="ico" id="agronegocio-ico"></span>
                         </div>    
                     </a>
-                    <h4>Agronegocio</h4>
+                    <h4>Agronegócio</h4>
                 </div>
                 <div class="col-xs-12 col-md-4">
                     <a href="" id="politica">
@@ -127,7 +127,7 @@
                             <span class="ico" id="politica-ico"></span>
                         </div>    
                     </a>
-                    <h4>Politica</h4>
+                    <h4>Política</h4>
                 </div>
                 <div class="col-xs-12 col-md-4">
                     <a href="" id="parceiros">
