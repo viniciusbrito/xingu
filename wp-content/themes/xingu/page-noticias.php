@@ -35,22 +35,18 @@
                 <div class="paginacao"><?php wp_pagination();?></div>
             </div>
             <div class="col-md-3 col-xs-12 right">
-                <h3>Arquivo</h3>
-                    <ul>
-                        <?php wp_get_archives('type=monthly'); ?>
-                    </ul>
                 <div class="row">
                     <div class="col-md-12">
                         <h3>Categorias</h3>
-                        <ul class="list-group">
+                        <div class="list-group">
                             <?php
                             $categories =  get_categories(); 
                             foreach($categories  as $category):
                                 $category_link = get_category_link( $category->term_id ); 
                                 ?>
-                            <a href="<?= $category_link ?>"><li class="list-group-item"><?= $category->name ?></li></a>
+                            <a href="<?= $category_link ?>" class="list-group-item"><?= $category->name ?></a>
                             <?php endforeach; ?>
-                        </ul>
+                        </div>
                     </div>
                 </div>
                 
@@ -62,7 +58,7 @@
                             foreach($tags as $tag):
                                 $tag_link = get_tag_link( $tag->term_id );
                         ?>
-                                <a href="<?= $tag_link ?>" title="<?= $tag->name ?> Tag" class=""><?= $tag->name ?></a>
+                                <a href="<?= $tag_link ?>" title="<?= $tag->name ?> Tag" class="badge"><?= $tag->name ?></a>
                             <?php endforeach; ?>
                     </div>
                 </div>

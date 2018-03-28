@@ -6,6 +6,7 @@ function wp_responsivo_scripts()
     wp_enqueue_style( 'reset', get_template_directory_uri() . '/assets/css/reset.css' );
     wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css' );
     wp_enqueue_style( 'frontpage', get_template_directory_uri() . '/assets/css/frontpage.css' );
+    wp_enqueue_style( 'singlepost', get_template_directory_uri() . '/assets/css/single-post.css' );
     wp_enqueue_style( 'style', get_stylesheet_uri() );
     /* Carregando no footer */
     wp_enqueue_script('bootstrap-js', get_template_directory_uri().'/assets/js/bootstrap.min.js', ['jquery'], '', true );

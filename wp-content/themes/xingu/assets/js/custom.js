@@ -9,11 +9,11 @@
     var slideshow = function () {
         let url = 'url("' + images[Math.floor(Math.random() * count)]+'")';
         $slides
-            .fadeOut(15000, function () {
+            .fadeOut(1500, function () {
                 $slides.css('background-image', url);
-                setTimeout(slideshow, 15000);
+                setTimeout(slideshow, 5000);
             })            
-            .fadeIn(1500, () => {
+            .fadeIn(1000, () => {
                 $slides.css('background-image', url);
         });
     };

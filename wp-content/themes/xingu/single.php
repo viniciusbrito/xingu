@@ -6,7 +6,7 @@
             <div class="col-sm-8 col-xs-12">
                 <div class="row">
                     <div class="col-sm-12">
-                        <div class="thumb-cover" style="width: 100%; max-height: 500px;">
+                        <div class="thumb-cover">
                             <?php the_post_thumbnail() ?>
                         </div>
                     </div>
