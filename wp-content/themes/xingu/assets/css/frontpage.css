@@ -40,7 +40,7 @@ ul{
 }
 
 #header-slider {
-    background: url(../images/banner.jpg) no-repeat 0px 0px;
+    background: url(../images/banners/banner_1.jpg) no-repeat 0px 0px;
     background-size: cover;
     height: 720px;
 }
@@ -152,7 +152,7 @@ ul{
 .servicos {
     text-align: center;
     overflow: auto;
-    background: url('../images/categorias-background.jpg') no-repeat;
+    background: url('../images/categorias-background-aviao-2.jpg') no-repeat;
     background-size: 100% auto;
     background-color: #fff;
     background-position: center;
